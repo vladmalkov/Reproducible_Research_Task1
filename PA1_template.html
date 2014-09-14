@@ -254,7 +254,7 @@ d2&lt;-d2[,-4]
 
 <h3>Total number of missing values in the dataset is 2304</h3>
 
-<h3>d2 is a new dataset, where missing values are imputed as the medians for corresponding 5-minute intervals</h3>
+<h3>d2 is a new dataset, where missing values are imputed as the medians for corresponding 5-minute intervals. Median values for each corresponding 5-minute interval were calculated (NA ignored), merged using &ldquo;interval&rdquo; common variable, followed by substitution of missing values by the corresponding medians.</h3>
 
 <pre><code class="r">hist(tapply(d2$steps,d2$date,sum,na.rm=T),xlab=&quot;Number of steps&quot;,main=&quot;Histogram of number of steps per day\n after imputation&quot;, col=&quot;red&quot;)
 </code></pre>

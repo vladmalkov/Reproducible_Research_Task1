@@ -71,7 +71,8 @@ d2[is.na(d2$steps),"steps"]<-d2[is.na(d2$steps),"steps2"]
 d2<-d2[,-4]
 ```
 ### Total number of missing values in the dataset is 2304
-### d2 is a new dataset, where missing values are imputed as the medians for corresponding 5-minute intervals 
+### d2 is a new dataset, where missing values are imputed as the medians for corresponding 5-minute intervals. Median values for each corresponding 5-minute interval were calculated (NA ignored), merged using "interval" common variable, followed by substitution of missing values by the corresponding medians.
+
 
 ```r
 hist(tapply(d2$steps,d2$date,sum,na.rm=T),xlab="Number of steps",main="Histogram of number of steps per day\n after imputation", col="red")
